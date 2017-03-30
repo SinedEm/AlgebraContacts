@@ -2,7 +2,17 @@
 
   require_once 'core/init.php';
   
-  Helper::getHeader('Algebra Contants', 'header')
+  Helper::getHeader('Algebra Contants', 'header');
+  $db = DB::getInstance()->query("SELECT * FROM users WHERE id =");
+  echo '<pre>';
+  //var_dump($db);
+  if($db->count() > 0){
+  foreach ($db->results() as $result) {
+	  echo $result->name;
+    }
+  } else {
+	  echo 'Trenutno nema podataka u bazi!';
+  }
   ?>
   <div class="row">
         <div class="col-md-8 col-md-offset-2">
