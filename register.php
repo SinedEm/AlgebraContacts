@@ -30,9 +30,9 @@
 				'matches'  => 'password'
 			)
 		));
-		echo '<pre>';
+		/*echo '<pre>';
 		print_r($validate->errors());
-		echo '</pre>';
+		echo '</pre>';*/
 	}
 ?>
 <div class="row">
