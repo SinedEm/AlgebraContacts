@@ -33,21 +33,6 @@ class Validation
 								$this->addError($item, "Field {$item} must have a maximum of {$rule_value} characters.");
 							}
 						break;
-						case 'special':
-							if(preg_match('/[\'\/~`\!@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:"\<\>,\.\?\\\]/',$value)){
-								$this->addError($item, "Your {$item} cannot contain special characters.");
-							}
-						break;
-						case 'number':
-							if(!preg_match("#[0-9]+#",$value)) {
-								$this->addError($item, "Your {$item} must contain at least one number.");
-							}
-						break;
-						case 'capital':
-							if(!preg_match("#[A-Z]+#",$value)) {
-								$this->addError($item, "Your {$item} must contain at least one uppercase letter.");
-							}
-						break;
 						case 'matches':
 							if($value != $_POST[$rule_value]) {
 								$this->addError($item, "Field {$item} must match field {$rule_value}.");
