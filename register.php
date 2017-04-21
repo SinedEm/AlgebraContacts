@@ -48,7 +48,7 @@
                         'password' => Hash::make(Input::get('password'), $salt),
                         'salt' => $salt,
                         'name' => Input::get('name'),
-                        'role_id' => 2
+                        'role_id' => 3
                     ));
 
                 } catch(Exception $e) {
