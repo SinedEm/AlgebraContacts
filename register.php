@@ -48,7 +48,7 @@
                         'password' => Hash::make(Input::get('password'), $salt),
                         'salt' => $salt,
                         'name' => Input::get('name'),
-                        'role_id' => 3
+                        'role_id' => 2
                     ));
 
                 } catch(Exception $e) {
@@ -64,7 +64,7 @@
         }
     }
 
-    Helper::getHeader('User Registration');
+    Helper::getHeader('User Registration', 'header', $user);
 
     require_once 'notifications.php';
 ?>
