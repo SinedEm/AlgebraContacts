@@ -8,7 +8,7 @@ class Config
     public static function get($file)
     {
         if($file) {
-            $items = require_once $file.'.php';
+            $items = require $file.'.php';
             return $items;
         }
         return false;
